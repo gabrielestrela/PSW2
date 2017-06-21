@@ -4,39 +4,57 @@ body {
     height: 100%;
 }
 
-
 nav {
     -webkit-box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.75);
 }
 
-nav img{
+nav img {
     width: 60px;
     height: 60px;
     margin-top: -18px;
 }
 
-#clientID{
+#clientID {
     text-align: center;
 }
 
-
-#clientMENU{
+#clientMENU {
     margin-top: 100px;
 }
 
 #tablePET td:last-child,
-#tablePET th:last-child{
+#tablePET th:last-child {
     text-align: right;
     width: 20px;
-    
 }
 
-#btnFormPet{
+#btnFormPet,
+#btnFormSchedule {
     margin-right: 25px;
 }
 
-.tab-pane{
+.tab-pane {
     margin-top: 10px;
+}
+
+#tableS1 td:first-child,
+#tableS2 td:first-child,
+#tableS3 td:first-child,
+#tableS4 td:first-child,
+#tableS5 td:first-child,
+#tableS6 td:first-child,
+#tableS7 td:first-child,
+#tableS8 td:first-child,
+#tableS9 td:first-child,
+#tableS10 td:first-child {
+    width: 10px;
+    height: 40px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#dSl, #hSl{
+    margin-top: 5px;
 }

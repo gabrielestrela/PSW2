@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+    
+    //Modal Add Pet
     $("#btnFormPet").click(function () {
         $("#formPET").modal();
     });
@@ -105,5 +106,49 @@ $(document).ready(function () {
     
     //Administracao da tabela PET
     
+    //Modal Agendamento
+    $("#btnFormSchedule").click(function(){
+        $("#formSchedule").modal();
+    });
+   
+    //Matrizes que representam as semanas com 10 horarios e 5 dias
+    var week1 = [10][5];
+    var week2 = [10][5];
+    var week3 = [10][5];
+    var week4 = [10][5];
+    var week5 = [10][5];
+    var week6 = [10][5];
+    var week7 = [10][5];
+    var week8 = [10][5];
+    var week9 = [10][5];
+    var week10 = [10][5];
+    
+    var hours = [{id: 0, text: '08:00'}, {id: 1, text: '09:00'}, {id: 2, text: '10:00'}, {id: 3, text: '11:00'}, {id: 4, text: '12:00'}, {id: 5, text: '13:00'}, {id: 6, text: '14:00'}, {id: 7, text: '15:00'}, {id: 8, text: '16:00'}, {id: 9, text: '17:00'}];
+    
+    var days = [{id: 0, text: 'Segunda'}, {id: 1, text: 'Terca'}, {id: 2, text: 'Quarta'}, {id: 3, text: 'Quinta'}, {id: 4, text: 'Sexta'}];
+    
+    var weeks = [{id: 0, text: 'Semana 1'}, {id: 1, text: 'Semana 2'}, {id: 2, text: 'Semana 3'}, {id: 3, text: 'Semana 4'}, {id: 4, text: 'Semana 5'}, {id: 5, text: 'Semana 6'}, {id: 6, text: 'Semana 7'}, {id: 7, text: 'Semana 8'}, {id: 8, text: 'Semana 9'}, {id: 9, text: 'Semana 10'}];
+    
+    //Setando os selects
+    $(".weekSelect").select2({
+        placeholder: "Selecione sua semana",
+        allowClear: true,
+        data: weeks,
+        theme: "bootstrap"
+    });
+    
+    $(".daySelect").select2({
+        placeholder: "Seleciona seu dia",
+        allowClear: true,
+        data: days,
+        theme: "bootstrap"
+    });
+    
+        $(".hourSelect").select2({
+        placeholder: "Seleciona uma hora",
+        allowClear: true,
+        data: hours,
+        theme: "bootstrap"
+    });
     
 });
