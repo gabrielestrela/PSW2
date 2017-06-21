@@ -69,6 +69,7 @@ $(document).ready(function () {
         var index;
         //Edicao
         $("#tablePET").on("click", ".edit", function(e){
+            //Esse codigo loco pega o index da linha referente ao botao de edicao
             index = $(this).closest("td").parent()[0].sectionRowIndex;
             //console.log(parent);
             //console.log(parent.index());
