@@ -104,48 +104,66 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
+                    
+                    <!-- Painel de Pets -->
                 <div class="collapse" id="cadastroPET">
                     <div class="well well-lg">
-                        <table class="table table-striped table-hover">
+                        <table id="tablePET" class="table table-striped table-hover">
                             <tr>
                                 <th>Foto</th>
                                 <th>Nome</th>
                                 <th>ID</th>
                                 <th>Raca</th>
                                 <th>Idade</th>
+                                <th>Editar/Remover</th>
+                            </tr>
+<!--
+                            <tr>
+                                <td>PIU1</td>
+                                <td>teste</td>
+                                <td>teste</td>
+                                <td>teste</td>
+                                <td>teste</td>
+                                <td>
+                                    <button class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                    <button id="rm1" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
                             <tr>
-                                <td>PIU</td>
+                                <td>PIU2</td>
                                 <td>teste</td>
                                 <td>teste</td>
                                 <td>teste</td>
                                 <td>teste</td>
+                                <td>
+                                    <button class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                    <button id="rm2" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>PIU</td>
-                                <td>teste</td>
-                                <td>teste</td>
-                                <td>teste</td>
-                                <td>teste</td>
-                            </tr>
+-->
                         </table>
                     </div>
-                    <button class="btn btn-info pull-right" type="button" data-toggle="modalFormPet" data-target="#formPET" id="btnPetForm">Cadastrar</button>
+                    <button id="btnFormPet" class="btn btn-info pull-right" type="button" data-toggle="modalFormPet" data-target="#formPET">Cadastrar</button>
                 </div>
-
+                    <!-- Painel de Pets -->
+                    
+                    <!-- Painel de Agendamento -->
                 <div class="collapse" id="agendamento">
                     <div class="well well-lg">
                         <p>TESTE 2</p>
                     </div>
                 </div>
-
+                    <!-- Painel de Agendamento -->
+                    
+                    <!-- Painel de Carrinho -->
                 <div class="collapse" id="carrinho">
                     <div class="well well-lg">
                         <p>TESTE 3</p>
                     </div>
                 </div>
+                    <!-- Painel de Carrinho -->
 
+                   <!-- Painel de Dados Psssoais -->
                 <div class="collapse" id="dadosPESSOAIS">
                     <div class="well well-lg">
 
@@ -205,16 +223,19 @@
                                 <input type="text" class="form-control" id="email" aria-describedby="email" readonly>
                             </div>
                         </div>
-
+                            
                     </div>
                 </div>
+                    <!-- Painel de Dados Psssoais -->
+                
             </div>
         </div>
     </div>
     <!-- Data targets -->
 
     <!-- Modals -->
-
+    
+        <!-- Cadastro PET -->
     <div class="modal fade" id="formPET" tabindex="-1" role="dialog" aria-labelledby="CadastroPet">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -224,6 +245,71 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="CadastroPet">Adicione Seu Amigo!</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="petPic" class="control-label">Foto</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-picture-o" aria-hidden="true"></i>
+
+</span>
+                            <input id="fotoPET" type="text" class="form-control" id="petPic" aria-describedby="petPic">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petName" class="control-label">Nome</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-paw" aria-hidden="true"></i>
+</span>
+                            <input id="nomePET" type="text" class="form-control" id="petName" aria-describedby="petName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petRaca" class="control-label">Raca</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-venus-mars" aria-hidden="true"></i>
+</span>
+                            <input id="racaPET" type="text" class="form-control" id="petRaca" aria-describedby="petRaca">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petIdade" class="control-label">Idade</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-info" aria-hidden="true"></i>
+
+</span>
+                            <input id="idadePET" type="text" class="form-control" id="petIdade" aria-describedby="petIdade">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id="addPet" class="btn btn-success" type="button" data-dismiss="modal">
+                        Adicionar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <!-- Cadastro PET -->
+        
+        <!-- Edicao PET -->
+    <div class="modal fade" id="editFormPET" tabindex="-1" role="dialog" aria-labelledby="editPET">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="editPET">Atualize Seu Amigo!</h4>
                 </div>
 
                 <div class="modal-body">
@@ -269,14 +355,15 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-success" type="button" data-dismiss="modal">
-                        Adicionar
+                    <button id="editPet" class="btn btn-success" type="button" data-dismiss="modal">
+                        Atualizar
                     </button>
                 </div>
 
             </div>
         </div>
     </div>
+        <!-- Edicao PET -->
 
     <!-- Modals -->
 

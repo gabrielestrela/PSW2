@@ -25,3 +25,14 @@ nav img{
 #clientMENU{
     margin-top: 100px;
 }
+
+#tablePET td:last-child,
+#tablePET th:last-child{
+    text-align: right;
+    width: 20px;
+    
+}
+
+#btnFormPet{
+    margin-right: 25px;
+}
