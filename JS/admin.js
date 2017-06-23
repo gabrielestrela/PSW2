@@ -34,8 +34,11 @@ $(document).ready(function () {
     var Email;
     var Endereco;
     var Descricao;
+    var Estoque;
+    var Vendido;
     var Preco;
     var tableRows;
+    var index;
 
     // Simula a criacao de uma entrada de info. no banco de dados.
     var admArray = [];
@@ -73,8 +76,6 @@ $(document).ready(function () {
     //Remocao ADM
 
     //Edicao ADM
-    var index;
-
     $("#tableADM").on("click", ".edit", function (e) {
         //Esse codigo loco pega o index da linha referente ao botao de edicao
         index = $(this).closest("td").parent()[0].sectionRowIndex;
@@ -146,8 +147,6 @@ $(document).ready(function () {
     //Remocao CLIENTE
 
     //Edicao CLIENTE
-    var index;
-
     $("#tableCLIENTE").on("click", ".edit", function (e) {
         //Esse codigo loco pega o index da linha referente ao botao de edicao
         index = $(this).closest("td").parent()[0].sectionRowIndex;
@@ -186,9 +185,72 @@ $(document).ready(function () {
     });
     //Edicao CLIENTE
 
+    //Adicao Produtos
+    $("#btnFormProdutos").click(function () {
+        $("#formPRODUTO").modal();
+    });
+
+    $("#addProduto").click(function () {
+        tableRows = document.getElementById("tablePRODUTOS").rows.length;
+        Foto = $("#produtoPic").val();
+        Nome = $("#produtoName").val();
+        Descricao = $("#produtoDesc").val();
+        Preco = $("#produtoPrice").val();
+        Estoque = $("#produtoEstoque").val();
+        //        console.log(Foto + "\n" + Nome + "\n" + Telefone + "\n" + Email);
+        ID = Nome.substr(2).concat(Descricao.substr(1, 4), Preco.substr(1, 2));
+
+        var markup = "<tr><td>" + Foto + "</td><td>" + Nome + "</td><td>" + ID + "</td><td>" + Descricao + "</td><td>" + Preco + "</td><td>" + Estoque + "</td><td>0</td><td><button class='btn btn-warning edit'><i class='fa fa-pencil' aria-hidden='true'></i></button> <button class='btn btn-danger rm'><i class='fa fa-times' aria-hidden='true'></i></button></td></tr>";
+
+        $("#tablePRODUTOS").append(markup);
+
+        $("#produtoPic").val("");
+        $("#produtoName").val("");
+        $("#produtoDesc").val("");
+        $("#produtoPrice").val("");
+        $("#produtoEstoque").val("");
+    });
+    //Adicao Produtos
+
+    //Remocao Produtos
+    $("#tablePRODUTOS").on("click", ".rm", function (e) {
+        $(this).closest('tr').remove();
+    });
+    //Remocao Produtos
+
+    //Edicao Produtos
+    $("#tablePRODUTOS").on("click", ".edit", function (e) {
+        //Esse codigo loco pega o index da linha referente ao botao de edicao
+        index = $(this).closest("td").parent()[0].sectionRowIndex;
+        //console.log(parent);
+        //console.log(parent.index());
+        $("#editFormPRODUTO").modal();
+
+        $("#editProduto").click(function () {
+            Foto = $("#editProdutoPic").val();
+            Nome = $("#editProdutoName").val();
+            Descricao = $("#editProdutoDesc").val();
+            Preco = $("#editProdutoPrice").val();
+            ID = Nome.substr(2).concat(Descricao.substr(1, 4), Preco.substr(1, 2));
+            //var index = parent.parent()[0].sectionRowIndex;
+
+            document.getElementById('tablePRODUTOS').rows[index].cells[0].innerHTML = Foto;
+            document.getElementById('tablePRODUTOS').rows[index].cells[1].innerHTML = Nome;
+            document.getElementById('tablePRODUTOS').rows[index].cells[2].innerHTML = ID;
+            document.getElementById('tablePRODUTOS').rows[index].cells[3].innerHTML = Descricao;
+            document.getElementById('tablePRODUTOS').rows[index].cells[4].innerHTML = Preco;
+
+        });
+        $("#editProdutoPic").val("");
+        $("#editProdutoName").val("");
+        $("#editProdutoDesc").val("");
+        $("#editProdutoPrice").val("");
+    });
+    //Edicao Produtos
+
     //Adicao Servicos
     $("#btnFormServicos").click(function () {
-        $("#formSERVICO").modal();
+        $("#formPRODUTO").modal();
     });
 
     $("#addServico").click(function () {
@@ -218,8 +280,6 @@ $(document).ready(function () {
     //Remocao Servicos
 
     //Edicao de Servicos
-    var index;
-
     $("#tableSERVICOS").on("click", ".edit", function (e) {
         //Esse codigo loco pega o index da linha referente ao botao de edicao
         index = $(this).closest("td").parent()[0].sectionRowIndex;

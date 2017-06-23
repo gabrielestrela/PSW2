@@ -28,7 +28,8 @@ nav img{
 
 #btnFormAdm,
 #btnFormCliente,
-#btnFormServicos{
+#btnFormServicos,
+#btnFormProdutos{
     margin-right: 25px;
 }
 
@@ -37,7 +38,9 @@ nav img{
 #tableCLIENTE td:last-child,
 #tableCLIENTE th:last-child,
 #tableSERVICOS td:last-child,
-#tableSERVICOS th:last-child{
+#tableSERVICOS th:last-child,
+#tablePRODUTOS td:last-child,
+#tablePRODUTOS th:last-child{
     text-align: right;
     width: 20px;
 }
