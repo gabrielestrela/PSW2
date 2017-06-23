@@ -42,6 +42,7 @@ $(document).ready(function () {
 
     // Simula a criacao de uma entrada de info. no banco de dados.
     var admArray = [];
+    var servicos = ["Veterinario", "Banho", "Tosa", "Caminhada"];
 
     //Modal Add Adm
     $("#btnFormAdm").click(function () {

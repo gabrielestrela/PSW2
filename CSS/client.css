@@ -25,13 +25,16 @@ nav img {
 }
 
 #tablePET td:last-child,
-#tablePET th:last-child {
+#tablePET th:last-child,
+#tableCARRINHO td:last-child,
+#tableCARRINHO th:last-child{
     text-align: right;
     width: 20px;
 }
 
 #btnFormPet,
-#btnFormSchedule {
+#btnFormSchedule,
+#btnFormCarrinho{
     margin-right: 25px;
 }
 
@@ -55,6 +58,13 @@ nav img {
     font-weight: bold;
 }
 
-#dSl, #hSl{
+#dSl, #hSl, #sSl, #pSl{
     margin-top: 5px;
+}
+
+#totalLabel{
+    margin-right: 5px;
+}
+#total{
+    text-align: right;
 }
