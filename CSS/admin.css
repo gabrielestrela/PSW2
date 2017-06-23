@@ -25,3 +25,19 @@ nav img{
 #admMENU{
     margin-top: 100px;
 }
+
+#btnFormAdm,
+#btnFormCliente,
+#btnFormServicos{
+    margin-right: 25px;
+}
+
+#tableADM td:last-child,
+#tableADM th:last-child,
+#tableCLIENTE td:last-child,
+#tableCLIENTE th:last-child,
+#tableSERVICOS td:last-child,
+#tableSERVICOS th:last-child{
+    text-align: right;
+    width: 20px;
+}

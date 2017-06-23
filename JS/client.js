@@ -40,6 +40,9 @@ $(document).ready(function () {
         var Idade;    
         var tableRows;
         
+        // Simula a criacao de uma entrada de info. no banco de dados.
+        var petArray = [];
+        
         //Adicao
         $("#addPet").click(function(){
             tableRows = document.getElementById("tablePET").rows.length;
