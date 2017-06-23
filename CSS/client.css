@@ -16,6 +16,16 @@ nav img {
     margin-top: -18px;
 }
 
+nav button a,
+nav button a:link,
+nav button a:visited,
+nav button a:hover,
+nav button a:active
+{
+    text-decoration: none;
+    color: white;
+}
+
 #clientID {
     text-align: center;
 }
