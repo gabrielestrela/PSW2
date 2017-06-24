@@ -139,6 +139,11 @@ $(document).ready(function () {
         $("#formCARRINHO").modal();
     });
 
+    //Remocao Carrinho
+    $("#tableCARRINHO").on("click", ".rm", function (e) {
+        $(this).closest('tr').remove();
+    });
+    //Remocao Carrinho
 
     //Default de quantidade eh 1
     document.getElementById("qntty").defaultValue = "1";
